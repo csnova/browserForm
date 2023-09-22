@@ -1,3 +1,106 @@
 html {
   background-color: aliceblue;
 }
+
+body {
+  font: 1em sans-serif;
+  width: 500px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  display: grid;
+  grid-template-columns: 240px 240px;
+  grid-auto-rows: 50px;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+}
+
+p * {
+  display: block;
+}
+
+.mailBox {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.countryBox {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.zipCodeBox {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.passwordBox {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.passwordConfBox {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+input {
+  appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: rgb(84, 0, 153);
+  background-image: linear-gradient(to right, rgb(119, 171, 248), lightgreen);
+}
+
+input:valid {
+  border-color: rgb(84, 0, 153);
+  background-color: rgb(214, 192, 226);
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: rgb(146, 115, 196);
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
